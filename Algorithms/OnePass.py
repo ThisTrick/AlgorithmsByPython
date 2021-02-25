@@ -11,5 +11,8 @@ def composition(array):
 def max(array):
     pass
 
+def min(array):
+    pass
+
 def find(array, num):
     pass
