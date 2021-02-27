@@ -3,6 +3,7 @@ import os
 
 test_logs = []
 
+
 class TestLogData(object):
     def __init__(self, module_name: str, func_name: str, actual, expected, result: bool) -> None:
         super().__init__()
@@ -11,14 +12,16 @@ class TestLogData(object):
         self.actual = actual
         self.expected = expected
         self.result = result
+       
     def get_message(self):
-        return ('Function: ' + self.func_name + ' ' * 7 + 'Actual: ' + str(self.actual) + '\t' 
+        return ('Function: ' + self.func_name + '\n' + 'Actual: ' + str(self.actual) + '\t' 
             + 'Expected: ' + str(self.expected) + '\t' + 'Result: ' + str(self.result))
 
 def add_log(module_name: str, func_name: str, actual, expected, result: bool) -> None:
     log = TestLogData(module_name, func_name, actual, expected, result)
     test_logs.append(log)
 
+    
 def equal(module_name: str, func_name: str, actual, expected) -> None:
     result = actual == expected
     add_log(module_name, func_name, actual, expected, result)
