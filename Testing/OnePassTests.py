@@ -4,7 +4,7 @@ import Testing.Assert as Assert
 def start_tests():
     count_array_returned10()
     sum_array_returned314()
-    product_array_returned5316256774()
+    product_array_returnedNeg11334259497600()
     max_array_returned82()
 
 def get_array():
@@ -28,14 +28,14 @@ def sum_array_returned314():
     #Assert
     Assert.equal(__name__, sum_array_returned314.__name__, _actual, _expected)
 
-def product_array_returned5316256774():
+def product_array_returnedNeg11334259497600():
     #Arrange
     _test_array = get_array()
-    _expected = 5316256774
+    _expected = -11334259497600
     #Act
     _actual = op.product(_test_array)
     #Assert
-    Assert.equal(__name__, product_array_returned5316256774.__name__, _actual, _expected)
+    Assert.equal(__name__, product_array_returnedNeg11334259497600.__name__, _actual, _expected)
 
 def max_array_returned82():
     #Arrange

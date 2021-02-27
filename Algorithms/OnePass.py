@@ -14,7 +14,11 @@ def sum(array: list) -> float:
     return _s
 
 def product(array: list) -> float:
-    pass
+    ''' Product of numbers from list '''
+    _p = 1
+    for num in array:
+        _p *= num
+    return _p
 
 def max(array: list) -> float:
     pass
