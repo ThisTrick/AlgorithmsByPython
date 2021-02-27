@@ -27,6 +27,16 @@ def equal(module_name: str, func_name: str, actual, expected) -> None:
     result = actual == expected
     add_log(module_name, func_name, actual, expected, result)
 
+def arrays_equal(module_name: str, func_name: str, actual, expected) -> None:
+    if(len(actual) != len(expected)):
+        add_log(module_name, func_name, actual, expected, False)
+        return
+    result = True
+    for i in range(len(actual)):
+        result &= actual[i] == expected[i]
+    add_log(module_name, func_name, actual, expected, result)
+
+
 def is_none(module_name: str, func_name: str, actual) -> None:
     expected = None
     result = actual == expected
@@ -65,7 +75,7 @@ def print_summary(modules_name):
 def start():
     op.start_tests()
     clear_console()
-    #print_results()
     print_summary('Testing.OnePassTests')
     na.start_tests()
     print_summary('Testing.NumetricAlgorithmsTests')
+    print_results()
