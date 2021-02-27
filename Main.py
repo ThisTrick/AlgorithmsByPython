@@ -1,5 +1,7 @@
+import Testing.Assert as testing
+
 def main():
-    pass
+    testing.start()
 
 if __name__ == '__main__':
     main()
