@@ -44,7 +44,24 @@ def clear_console():
     clear = lambda: os.system('cls')
     clear()
 
+def calc_summary():
+    _trues_count = 0
+    _falses_count = 0
+    for _log in test_logs:
+        if _log.result:
+            _trues_count += 1
+        else:
+            _falses_count += 1
+    return _trues_count, _falses_count
+
+def print_summary(modules_name):
+    message = '\n' * 2 + 'Module: '  + modules_name + '\n'
+    _trues_count, _falses_count = calc_summary()
+    message += 'True: ' + str(_trues_count) + '\t' + 'False: ' + str(_falses_count)
+    print(message)
+
 def start():
     op.start_tests()
     clear_console()
-    print_results()
+    #print_results()
+    print_summary('OnePass')
