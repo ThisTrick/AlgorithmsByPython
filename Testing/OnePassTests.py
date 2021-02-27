@@ -4,7 +4,7 @@ import Testing.Assert as Assert
 def start_tests():
     count_array_returned10()
     sum_array_returned314()
-    composition_array_returned5316256774()
+    product_array_returned5316256774()
     max_array_returned82()
 
 def get_array():
