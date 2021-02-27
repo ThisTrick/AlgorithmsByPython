@@ -28,14 +28,14 @@ def sum_array_returned314():
     #Assert
     Assert.equal(__name__, sum_array_returned314.__name__, _actual, _expected)
 
-def composition_array_returned5316256774():
+def product_array_returned5316256774():
     #Arrange
     _test_array = get_array()
     _expected = 5316256774
     #Act
-    _actual = op.composition(_test_array)
+    _actual = op.product(_test_array)
     #Assert
-    Assert.equal(__name__, composition_array_returned5316256774.__name__, _actual, _expected)
+    Assert.equal(__name__, product_array_returned5316256774.__name__, _actual, _expected)
 
 def max_array_returned82():
     #Arrange

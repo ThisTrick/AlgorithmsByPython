@@ -5,7 +5,7 @@ def count(array):
 def sum(array):
     pass
 
-def composition(array):
+def product(array):
     pass
 
 def max(array):
