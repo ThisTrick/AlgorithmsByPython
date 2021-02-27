@@ -6,6 +6,9 @@ def start_tests():
     sum_array_returned314()
     product_array_returnedNeg11334259497600()
     max_array_returned82()
+    min_array_returnedNeg26()
+    fint_arrayAnd23_returned3()
+    fint_arrayAndNeg26_returned9()
 
 def get_array():
     return [12, 54, 82, 23, 58, 82, 1, 3, 25, -26]

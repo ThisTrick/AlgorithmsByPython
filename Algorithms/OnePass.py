@@ -21,10 +21,23 @@ def product(array: list) -> float:
     return _p
 
 def max(array: list) -> float:
-    pass
+    ''' Max number from list '''
+    _m = array[0]
+    for num in array:
+        _m = num if num > _m else _m
+    return _m
 
 def min(array: list) -> float:
-    pass
+    ''' Min number from list'''
+    _n = array[0] 
+    for num in array:
+        _n = num if num < _n else _n
+    return _n
 
 def find(array: list, num: float) -> int:
-    pass
+    ''' Find index of number from list '''
+    _i = 0
+    for _num in array:
+        if _num == num:
+            return _i
+        _i += 1
